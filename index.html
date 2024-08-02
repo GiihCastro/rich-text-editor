@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <title>Rich Text Editor</title>
+     <link rel="icon" href="arquivos/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    
+    <h1>Rich Text Editor</h1>
+
+     <div id="switch" onclick="toggleMode()">
+        <button></button>
+        <span></span>
+      </div>
+
+    <div class="container">
+      <div class="toolbar">
+        <ul class="tool-list">
+          <li class="tool">
+            <button onclick="execCmd('justifyLeft')" class="tool--btn">
+              <i class="fas fa-align-left"></i>
+            </button>
+          </li>
+          <li class="tool">
+            <button onclick="execCmd('justifyCenter')" class="tool--btn">
+              <i class="fas fa-align-center"></i>
+            </button>
+          </li>
+          <li class="tool">
+            <button onclick="execCmd('bold')" class="tool--btn">
+              <i class="fas fa-bold"></i>
+            </button>
+          </li>
+          <li class="tool">
+            <button onclick="execCmd('italic')" class="tool--btn">
+              <i class="fas fa-italic"></i>
+            </button>
+          </li>
+          <li class="tool">
+            <button onclick="execCmd('underline')" class="tool--btn">
+              <i class="fas fa-underline"></i>
+            </button>
+          </li>
+          <li class="tool">
+            <button onclick="execCmd('strikeThrough')" class="tool--btn">
+              <i class="fas fa-strikethrough"></i>
+            </button>
+          </li>
+          <li class="tool">
+            <button onclick="execCmd('insertOrderedList')" class="tool--btn">
+              <i class="fas fa-list-ol"></i>
+            </button>
+          </li>
+          <li class="tool">
+            <button onclick="execCmd('insertUnorderedList')" class="tool--btn">
+              <i class="fas fa-list-ul"></i>
+            </button>
+          </li>
+          <li class="tool">
+            <button onclick="createLink()" class="tool--btn">
+              <i class="fas fa-link"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div id="output" contenteditable="true"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
